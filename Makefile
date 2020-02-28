@@ -1,10 +1,9 @@
-.PHONY: dep build fmt
+.PHONY: build fmt
 
-dep:
-		dep ensure
+all: build
 
-build: dep
+build: fmt
 		go build -o todos .
 
-fmt: dep
+fmt:
 		go fmt ./...
